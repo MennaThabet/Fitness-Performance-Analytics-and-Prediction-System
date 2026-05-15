@@ -80,15 +80,15 @@ This project applies the full **Big Data Analytics lifecycle** to a real-world p
 flowchart TD
     RAW["📂 Raw Data\nbodyPerformance.csv\n13,393 records · 12 columns"]
  
-    P1["🧹 PART 1 — Menna\nData Loading, Preprocessing & EDA\n→ Outputs: cleaned_bodyPerformance.csv + 16 charts"]
+    P1["🧹 PART 1\nData Loading, Preprocessing & EDA\n→ Outputs: cleaned_bodyPerformance.csv + 16 charts"]
  
-    P2["📊 PART 2 — Moaz\nStatistical Analysis & Hypothesis Testing\nT-Test · ANOVA · Correlation · Chi-Square"]
+    P2["📊 PART 2\nStatistical Analysis & Hypothesis Testing\nT-Test · ANOVA · Correlation · Chi-Square"]
  
-    P3["🌳 PART 3 — Naira\nTree-Based ML Models\nDecision Tree · Random Forest · XGBoost · Naive Bayes"]
+    P3["🌳 PART 3\nTree-Based ML Models\nDecision Tree · Random Forest · XGBoost · Naive Bayes"]
  
-    P4["📐 PART 4 — Kareem\nLinear & Distance Models\nLogistic Regression · KNN"]
+    P4["📐 PART 4\nLinear & Distance Models\nLogistic Regression · KNN"]
  
-    P5["🔵 PART 5 — Mohamed\nK-Means Clustering + Final Integration\nElbow Method · Cluster Analysis · Report Assembly"]
+    P5["🔵 PART 5\nK-Means Clustering + Final Integration\nElbow Method · Cluster Analysis · Report Assembly"]
  
     RESULT["📈 Model Comparison & Final Report\nSections A–J · Best model: XGBoost / KNN (~74–76%)"]
  
