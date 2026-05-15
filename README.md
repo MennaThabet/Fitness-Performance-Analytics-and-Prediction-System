@@ -14,7 +14,6 @@
 ## 📋 Table of Contents
 
 - [Project Overview](#-project-overview)
-- [Repository Structure](#-repository-structure)
 - [Dataset](#-dataset)
 - [Project Pipeline](#-project-pipeline)
 - [Part 1 — Preprocessing & EDA](#-part-1--data-preprocessing--eda)
@@ -42,25 +41,6 @@ This project applies the full **Big Data Analytics lifecycle** to a real-world p
 - Does body fat percentage differ across performance classes?
 - Which physical features are the most predictive of performance class?
 - Do natural clusters in the data align with the labelled fitness grades?
-
----
-
-## 📁 Repository Structure
-
-```
-body-performance-analysis/
-│
-├── 📄 README.md
-│
-├── 📊 data/
-│   ├── bodyPerformance.csv               # Original raw dataset
-│   └── cleaned_bodyPerformance.csv       # Cleaned dataset (output of Part 1)
-│
-├── 💻 code/
-│   └── BodyPerformanceAnalysis.R     # Complete combined R script (all 6 parts)
-│
-└── 📑 report/
-    └── Body_Performance_Final_Report.pdf # Full project documentation (Sections A–J)
 
 ---
 
@@ -93,42 +73,35 @@ body-performance-analysis/
 | `class` | Categorical | **A / B / C / D** | 🎯 **Target** — Fitness grade (A = best, D = lowest) |
 
 ---
-
+ 
 ## 🔄 Project Pipeline
-
+ 
+```mermaid
+flowchart TD
+    RAW["📂 Raw Data\nbodyPerformance.csv\n13,393 records · 12 columns"]
+ 
+    P1["🧹 PART 1 — Menna\nData Loading, Preprocessing & EDA\n→ Outputs: cleaned_bodyPerformance.csv + 16 charts"]
+ 
+    P2["📊 PART 2 — Moaz\nStatistical Analysis & Hypothesis Testing\nT-Test · ANOVA · Correlation · Chi-Square"]
+ 
+    P3["🌳 PART 3 — Naira\nTree-Based ML Models\nDecision Tree · Random Forest · XGBoost · Naive Bayes"]
+ 
+    P4["📐 PART 4 — Kareem\nLinear & Distance Models\nLogistic Regression · KNN"]
+ 
+    P5["🔵 PART 5 — Mohamed\nK-Means Clustering + Final Integration\nElbow Method · Cluster Analysis · Report Assembly"]
+ 
+    RESULT["📈 Model Comparison & Final Report\nSections A–J · Best model: XGBoost / KNN (~74–76%)"]
+ 
+    RAW --> P1
+    P1 --> P2
+    P1 --> P3
+    P3 --> P4
+    P3 --> P5
+    P2 --> RESULT
+    P4 --> RESULT
+    P5 --> RESULT
 ```
-Raw Data (bodyPerformance.csv)
-        │
-        ▼
-┌─────────────────────────────┐
-│          PART 1             │
-│    Preprocessing + EDA      │
-└─────────────┬───────────────┘
-              │
-     ┌────────┴────────┐
-     ▼                 ▼
-┌──────────┐    ┌──────────────────────────┐
-│  PART 2  │    │          PART 3          │
-│ T-Test   │    │  Decision Tree           │
-│ ANOVA    │    │  Random Forest           │
-│ Corr     │    │  XGBoost                 │
-│ Chi-Sq   │    │  Naive Bayes             │
-└──────────┘    └──────────┬───────────────┘
-                           │            
-                           │
-                  ┌────────┴────────┐
-                  ▼                 ▼
-         ┌──────────────┐  ┌──────────────────┐
-         │    PART 4    │  │      PART 5      │
-         │  Logistic    │  │  K-Means         │
-         │  Regression  │  │  Clustering      │
-         │  KNN         │  │                  │
-         └──────────────┘  └──────────────────┘
-                  │
-                  ▼
-        Model Comparison & Final Report (Sections A–J)
-```
-
+ 
 ---
 
 ## 🧹 Part 1 — Data Preprocessing & EDA 
