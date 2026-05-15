@@ -80,7 +80,7 @@ This project applies the full **Big Data Analytics lifecycle** to a real-world p
 flowchart TD
     RAW["📂 Raw Data\nbodyPerformance.csv\n13,393 records · 12 columns"]
  
-    P1["🧹 PART 1\nData Loading, Preprocessing & EDA\n→ Outputs: cleaned_bodyPerformance.csv + 16 charts"]
+    P1["🧹 PART 1\nPreprocessing & EDA\n→ Outputs: cleaned_bodyPerformance.csv + 16 charts"]
  
     P2["📊 PART 2\nStatistical Analysis & Hypothesis Testing\nT-Test · ANOVA · Correlation · Chi-Square"]
  
