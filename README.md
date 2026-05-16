@@ -1,4 +1,4 @@
-# 🏋️ Body Performance Analysis — Big Data Analytics Project
+# 🏋️ Fitness Performance Analytics & Prediction System
 
 > **Ain Shams University · Faculty of Computer and Information Sciences**
 > Academic Year 2025–2026 · Big Data Analytics Course
